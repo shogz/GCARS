@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft/2019-09/schema",
+  "id": "https://github.com/directive0/picorderOS/SensorResponse.json",
+  "title": "SensorResponse",
+  "type": "array",
+  "properties":
+  {
+      "SensorDevice":
+        { "type": "object",
+          "properties": {
+              "devID": {"type": "string"},
+              "name": {"type": "string"},
+              "description": {"type": "string"},
+              "busType": {
+                "type": "string",
+                "enum": [ "SPI", "IIC"]
+              },
+              "busID": {"type": "string"},
+              "scanning": {"type": "boolean"},
+              "sensors": {
+				  "type": "array", 
+				  "items": {
+					  "Sensor" : {
+						  "type" : "object",
+						  "properties": {
+							  "dsc": {"type": "string"},
+							  "description": {"type": "string"},
+							  "sym": {"type": "string"},
+							  "symdescription": {"type": "string"}, 
+							  "minValue": {"type": "number"},
+							  "maxValue": {"type": "number"},
+							  "readings": {
+								  "type": "array", 
+								  "items": {
+									  "Reading": {
+										  "type": "object",
+										  "properties": {
+											  "value": {"type": "numer"},
+											  "timestamp": {"type": "string"}
+										  }
+									  }
+								  },
+								  "default": []
+							  }
+						  }
+					  }
+				  },
+				  "default": []
+				}
+			}
+        }
+    }
+  }
+

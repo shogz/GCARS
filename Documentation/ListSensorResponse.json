@@ -1,0 +1,76 @@
+[
+  {"SensorDevice": 
+   	{
+     	"devID": "SensorBoard1",
+    	"name": "BME680",
+      	"description" : "Temp, Hum, Pressure and VOC sensor by Bosch",
+      	"busType" : "IIC",
+      	"busID" : "0x77",
+      	"scanning" : "false",
+      	"sensors": [
+          {
+          	"dsc": "Temp", 
+            "sym": "°C",
+            "minValue": "-40",
+            "maxValue": "85"
+          },
+          {
+          	"dsc": "Hum", 
+            "sym": "%",
+            "minValue": "0",
+            "maxValue": "100"
+          },
+          {
+          	"dsc": "Press", 
+            "sym": "hPa",
+            "minValue": "300",
+            "maxValue": "1100"
+          },  
+          {
+          	"dsc": "VOC", 
+            "description": "Volatile Organic Component sensor provides indoor air qualitiy control",
+            "sym": "IAQ",
+            "symdescription": "IAQ - Indoor Air Quality Index. Please refer to the BMP680 Datasheet",
+            "minValue": "0",
+            "maxValue": "400"
+          }
+        ]
+    }
+  },
+  {"SensorDevice":
+   	{
+    	"devID": "SensorBoard2",
+    	"name": "MPU6050",
+      	"description" : "6DOF Gyros and Accelerometer",
+      	"busType" : "IIC",
+      	"busID" : "0x68",
+      	"scanning" : "false",
+      	"sensors": [
+          {
+          	"dsc": "gyroX", 
+            "sym": "°"
+          },
+          {
+          	"dsc": "gyroY", 
+            "sym": "°"
+          },  
+          {
+          	"dsc": "gyroZ", 
+            "sym": "°"
+          },
+          {
+          	"dsc": "accX", 
+            "sym": "g"
+          },
+          {
+          	"dsc": "accY", 
+            "sym": "g"
+          },
+          {
+          	"dsc": "accZ", 
+            "sym": "g"
+          }
+        ]
+    }
+  }
+]

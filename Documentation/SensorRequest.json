@@ -1,0 +1,18 @@
+{
+	"$schema": "http://json-schema.org/draft/2019-09/schema",
+	"id": "https://github.com/directive0/picorderOS/SensorRequest.json",
+	"title": "SensorRequest",
+	"type": "object",
+	"properties":
+	{
+		"requestType":
+		{
+		    "type": "string",
+            "enum": [ "listSensors", "RequestDataSequence", "RequestSensorStream", "StartDataCollection", "StopDataCollection" ] 
+		},
+		"devID": {"type": "string"},
+		"dsc": {"type": "string"},
+		"fromTimestamp":{"type": "string"},
+		"fromTimestamp":{"type": "string"}
+	}
+}
